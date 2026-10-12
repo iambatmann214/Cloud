@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AWS Cloud Engineering Interactive Academy</title>
+    <script>
+      // GitHub Pages SPA redirect: converts the path to a hash-based route
+      // so the app can handle routing client-side
+      const path = window.location.pathname;
+      const base = '/Cloud';
+      const route = path.startsWith(base) ? path.slice(base.length) : path;
+      if (route && route !== '/') {
+        window.location.replace(base + '/#' + route + window.location.search);
+      } else {
+        window.location.replace(base + '/');
+      }
+    </script>
+  </head>
+  <body>
+    <p>Redirecting...</p>
+  </body>
+</html>
